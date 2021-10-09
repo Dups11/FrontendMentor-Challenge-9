@@ -7,13 +7,15 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: black;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
     max-width: 1440px;
     min-height: 800px;
     padding: 0 164px;
@@ -22,10 +24,10 @@ body {
     justify-content: center;
     background: no-repeat left bottom url(./images/pattern-curve.svg),                no-repeat left 261px top 214px url(./images/pattern-quotes.svg),                no-repeat bottom 91px right 72px url(./images/pattern-bg.svg)
     ,               white;
-    -webkit-transform: translate(-50%, -50%);
+    /* -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%); */
 }
 
 .testimonial {
@@ -109,4 +111,57 @@ body {
 
 .visible {
     display: flex;
+}
+
+@media screen and (max-width: 1120px) {
+    .container {
+        max-width: 375px;
+        min-height: 667px;
+        padding: 0;
+        background: no-repeat left bottom/75% url(./images/pattern-curve.svg),                no-repeat center 324px/15% url(./images/pattern-quotes.svg),                no-repeat top 4px center/87% url(./images/pattern-bg.svg)
+    ,               white;
+    }
+
+    .testimonial {
+        flex-direction: column-reverse;
+    }
+
+    .testimonial img {
+        width: 253px;
+        height: auto;
+        position: relative;
+    }
+
+    .text {
+        padding: 0 32px;
+        text-align: center;
+        margin-top: 45px;
+    }
+
+    .text p {
+        font-size: 17px;
+        line-height: 24px;
+        letter-spacing: 0.6px;
+    }
+
+    .text .name {
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .text .name span {
+        font-size: 14px;
+    }
+
+    .navigation {
+        width: 82px;
+        height: 40px;
+        bottom: 360px;
+        right: inherit;
+    }
+
+    .navigation img {
+        height: 80%;
+    }
 }
